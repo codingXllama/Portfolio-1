@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-1",
+  "version": "1.0.0",
+  "description": "Responsive portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "sass": "echo \"Hello from sass Script\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codingXllama/Portfolio-1.git"
+  },
+  "author": "Osama Al-Chalabi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/codingXllama/Portfolio-1/issues"
+  },
+  "homepage": "https://github.com/codingXllama/Portfolio-1#readme",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  }
+}
