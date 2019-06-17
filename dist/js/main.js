@@ -1,7 +1,7 @@
 // selecting DOM items
 
 // Selecting the first menuBten div 
-const menuBtn = document.querySelector('.btn-menu');
+const menuBtn = document.querySelector('.menu-btn');
 
 // Selecting the first menu div
 const menu = document.querySelector('.menu');
@@ -15,7 +15,7 @@ const menuBranding = document.querySelector('.menu-branding');
 
 //Taking all the navItems and storing it in a list, similar to an array
 //Using quertSelectorAll() instead of querySelector(), because we want to store all the  nav items not just the first one that appears
-const navItems = document.querySelectorAll('.nav-items');
+const navItems = document.querySelectorAll('.nav-item');
 
 
 
@@ -34,7 +34,28 @@ function toggleMenu() {
         //adding the close class to the menuBtn using the .classList.add() on the dom item (menuBtn)
         menuBtn.classList.add('close');
         menu.classList.add('show');
-    } {
+        menuNav.classList.add('show');
+        menuBranding.classList.add('show');
+
+        // going through all the items inside the navItem list and adding the 'show' class 
+        navItems.forEach(item => item.classList.add('show'));
+
+
+        //Settings the Menu State
+        showMenu = true;
+
+
+
+
+    } else { //if the menu (the overlay is shown) then we do the opposite as above
+        menuBtn.classList.remove('close');
+        menu.classList.remove('show');
+        menuNav.classList.remove('show');
+        menuBranding.classList.remove("show");
+
+        navItems.forEach(item => item.classList.remove('show'));
+        showMenu = false;
+
 
     }
 }

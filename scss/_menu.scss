@@ -21,4 +21,30 @@
     }
 
 
+    //we will style the menu 3Lines btn when it's closed (must have the class 'close')
+    //Rotating into X with Menu Line
+    &.close {
+        //roating the menu 3Lines 180 degrees, hence we use 'deg' for degree
+        transform: rotate(180deg);
+
+        .btn-line {
+            // selecting each button line
+
+            //Line 1- will Rotate
+            //using the nTh child CSS pseudo-class to select the 1st line from the menu 3 Line btns that has the btn-line div 
+            &:nth-child(1) {
+                background: red;
+            }
+
+
+
+            //Line 2- will Hide
+
+
+
+            //Line 3- will Rotate
+        }
+    }
+
+
 }
