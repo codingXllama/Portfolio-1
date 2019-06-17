@@ -1,0 +1,24 @@
+// Creating the menu button style
+
+.menu-btn {
+    //because we want the button to be where we want it to be
+    position: absolute;
+    z-index: 3;
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+    @include easeOut;
+
+    //adding the style for btn-line (which is the 3 lines on top of each other), used for displaying a menu
+
+    .btn-line {
+
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        background: #fff;
+        @include easeOut;
+    }
+
+
+}
