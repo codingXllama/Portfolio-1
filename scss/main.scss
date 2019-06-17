@@ -1,6 +1,65 @@
 $primary-color: #444;
+$secondary-color:#333;
+
+// creating a border box for all(*) the content in the html.css
+
+* {
+    // border-box will make the elements not be effected by the padding with in the box
+    box-sizing: border-box;
+}
+
 
 body {
     background: $primary-color;
     color: #fff;
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    // changing the line height between each line
+    line-height: 1.5;
 }
+
+
+// Adding the style for the heading
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-weight: 400;
+
+    //setting the lg-heading for only the heading that contains it, so we use the & sign
+    &.lg-heading {
+        // rem unit is the multiplier of the html font size (default size= 16 px)
+        //1 rem = 16 px,  
+        font-size: 6rem;
+    }
+
+    //setting the sm-heading for only the headings that contains it, so we use the & sign
+    &.sm-heading {
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        background: rgba(lighten($primary-color, 2), 0.5);
+    }
+
+}
+
+a {
+    // creating the color for the links
+    color: #fff;
+    text-decoration: none;
+}
+
+// creating the style for the header
+header {
+    // setting the position to fixed so that if we scroll down the header will ALWAYS be on the top.
+    // Fixed meaning glued.
+    position: fixed;
+    // making the header more viewable and stand out more regardless of what's behind it
+    // if we do z-index 1 then that can make the header less solid 
+    // The bigger the z-index is the closer the element is to us.
+    z-index: 2;
+    width: 100%;
+}
+
+
+// creating the style of the last name, which is the class text-secondary
