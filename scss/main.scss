@@ -2,7 +2,8 @@
 $primary-color: #444;
 $secondary-color:rgb(255, 80, 80);
 $show_home_image:true;
-$home_image:url();
+$home_image:url(../images/bg1.jpg);
+$background-opacity:0.9;
 
 
 // Creating a function that we can inherite from in the future
