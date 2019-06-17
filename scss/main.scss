@@ -1,5 +1,14 @@
+// creating the global variables
 $primary-color: #444;
-$secondary-color:#333;
+$secondary-color:rgb(255, 80, 80);
+$show_home_image:true;
+$home_image:url();
+
+
+// Creating a function that we can inherite from in the future
+@mixin easeOut {
+    transition: all 0.5s ease-out;
+}
 
 // creating a border box for all(*) the content in the html.css
 
@@ -63,3 +72,46 @@ header {
 
 
 // creating the style of the last name, which is the class text-secondary
+.text-secondary {
+    color: $secondary-color;
+}
+
+
+//Adding the style for the main tag
+main {
+    padding: 4rem;
+    height: 100%;
+
+    // creating the style for the icons which are nested within the main tag in the index.html file
+    // since we are nesting the icons div inside the main class, then that means the icons div will only be effected if they are in the main tag
+    .icons {
+        margin-top: 1rem;
+
+        // for each icon that has an a-tag we will style it
+        a {
+            padding: 0.4rem;
+
+            //adding the hover color for each of the a-tag 
+            //this is the same as a:hover in regular css
+            &:hover {
+                color: $secondary-color;
+                // Adding in a transition effect for hovering each icon
+                //adding transition to everything that is transitionable
+
+                //calling the mixin function
+                @include easeOut();
+            }
+
+        }
+    }
+
+    //using the & means for any main element if it contains the #home id, then it will be effected by the style with in the {}
+    &#home {
+        // removing the scroll bar with in the main page
+        overflow: hidden;
+
+        h1 {
+            margin-top: 20vh;
+        }
+    }
+}
