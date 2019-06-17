@@ -1,15 +1,14 @@
+// importing the needed config, which is found in the partial sass file (starts with _ ) 
+@import 'config';
+
 // creating the global variables
 $primary-color: #444;
 $secondary-color:rgb(255, 80, 80);
 $show_home_image:true;
-$home_image:url(../images/bg1.jpg);
+$home_image:url('../../images/bg1.jpg');
 $background-opacity:0.9;
 
 
-// Creating a function that we can inherite from in the future
-@mixin easeOut {
-    transition: all 0.5s ease-out;
-}
 
 // creating a border box for all(*) the content in the html.css
 
@@ -20,6 +19,8 @@ $background-opacity:0.9;
 
 
 body {
+    // Calling the background mixin inside the body
+    @include background;
     background: $primary-color;
     color: #fff;
     height: 100%;

@@ -1,0 +1,34 @@
+// Creating a function that we can inherite from in the future
+@mixin easeOut {
+    transition: all 0.5s ease-out;
+}
+
+// Creating a mixin for the background
+@mixin background {
+
+    //checking if the bg image is enable
+    @if $show_home_image {
+
+        // taking the element which has the id of bg-img
+        &#bg-img {
+            background: $home_image;
+            background-attachment: fixed;
+            background-size: cover;
+
+            &:after {
+                content: '';
+                //absolute means covering the entire body
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                // adding the z-index to allow the over lay to be behind the content on the page
+                // in order to make the overlay in back then the z-index should be in the negative
+                z-index: -1;
+                background: rgba($primary-color, $background-opacity);
+            }
+        }
+    }
+
+}
