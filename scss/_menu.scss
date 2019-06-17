@@ -33,16 +33,31 @@
             //Line 1- will Rotate
             //using the nTh child CSS pseudo-class to select the 1st line from the menu 3 Line btns that has the btn-line div 
             &:nth-child(1) {
-                background: red;
+                //background: red;
+                transform: rotate(45deg) translate(5px, 5px);
+                background: rgb(255, 246, 222);
             }
 
 
 
             //Line 2- will Hide
-
+            &:nth-child(2) {
+                opacity: 0;
+            }
 
 
             //Line 3- will Rotate
+            &:nth-child(3) {
+
+                //connecting the 1st and 3rd line together to form an X
+                //we do this by rotating in the opp direction of the 1st Line,
+                //and then we translate until the 2 lines form an X
+                transform: rotate(-45deg) translate(7px, -6px);
+                background: rgb(255, 255, 255);
+                width: 100%;
+                height: 0.25rem;
+            }
+
         }
     }
 
