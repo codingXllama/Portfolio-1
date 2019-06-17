@@ -4,7 +4,7 @@
   "description": "Responsive portfolio website",
   "main": "index.js",
   "scripts": {
-    "sass": "echo \"Hello from sass Script\""
+    "ScriptName_sass": "echo \"Hello from sass Script\""
   },
   "repository": {
     "type": "git",
