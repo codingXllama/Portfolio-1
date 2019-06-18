@@ -15,7 +15,7 @@ body {
     // Calling the background mixin inside the body
     @include background;
     background: $primary-color;
-    color: #fff;
+    color: set-text-color($primary-color);
     height: 100%;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -51,7 +51,7 @@ h3 {
 
 a {
     // creating the color for the links
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -77,7 +77,8 @@ header {
 //Adding the style for the main tag
 main {
     padding: 4rem;
-    height: 100%;
+    //height: 100%;
+    min-height: calc(100vh - 60px);
 
     // creating the style for the icons which are nested within the main tag in the index.html file
     // since we are nesting the icons div inside the main class, then that means the icons div will only be effected if they are in the main tag
@@ -87,16 +88,16 @@ main {
         // for each icon that has an a-tag we will style it
         a {
             padding: 0.4rem;
+            //calling the mixin function
+            // Adding in a transition effect for hovering each icon
+            //adding transition to everything that is transitionable
+            @include easeOut();
 
             //adding the hover color for each of the a-tag 
             //this is the same as a:hover in regular css
             &:hover {
                 color: $secondary-color;
-                // Adding in a transition effect for hovering each icon
-                //adding transition to everything that is transitionable
 
-                //calling the mixin function
-                @include easeOut();
             }
 
         }
