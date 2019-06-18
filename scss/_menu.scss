@@ -140,7 +140,8 @@
         .portrait {
             width: 250px;
             height: 250px;
-            background: url('../../images/workPic.jpg');
+            background: url('../../images/wp1.png');
+            background-size: cover;
             border-radius: 50%;
             border: solid 3px red;
         }
@@ -148,7 +149,12 @@
 
     .nav_item {
         transform: translate3d(600px, 0, 0);
-        // @include easeOut;
+        @include easeOut;
+
+        &.show {
+            //slide in from the right
+            transform: translate3d(0, 0, 0);
+        }
 
 
     }
