@@ -107,7 +107,8 @@
     &-nav {
         margin: 0;
         padding: 0;
-        background: darken($color: #3a3939c5, $amount: 0);
+        background: rgba(darken($primary-color, 5), 0.9);
+
         list-style: none;
         // taking the nav from top to buttom
         transform: translate3d(0, -100%, 0);
@@ -124,20 +125,22 @@
 
     //Adding style to the Branding side
     &-branding {
-        background: (39, 37, 37);
+        background: rgba($primary-color, 0.9);
         transform: translate3d(0, 100%, 0);
         @include easeOut;
 
+
         &.show {
             //Slide in from the bottom
-            transform: translate3d(0, -10, 0);
+            transform: translate3d(0, 0, 0);
 
         }
+
 
         .portrait {
             width: 250px;
             height: 250px;
-            background: url('../images/workPic.jpg');
+            background: url('../../images/workPic.jpg');
             border-radius: 50%;
             border: solid 3px red;
         }
@@ -145,7 +148,7 @@
 
     .nav_item {
         transform: translate3d(600px, 0, 0);
-        @include easeOut;
+        // @include easeOut;
 
 
     }
