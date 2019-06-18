@@ -28,7 +28,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0.9;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -37,15 +36,40 @@
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
+    float: left;
     width: 50%;
     height: 100vh;
     overflow: hidden; }
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    background: rgba(58, 57, 57, 0.772549);
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-branding {
+    background: 39, 37, 37;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.5s ease-out; }
+    .menu-branding.show {
+      transform: translate3d(0, -10, 0); }
+    .menu-branding .portrait {
+      width: 250px;
+      height: 250px;
+      background: url("../images/workPic.jpg");
+      border-radius: 50%;
+      border: solid 3px red; }
+  .menu .nav_item {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.5s ease-out; }
 
 * {
   box-sizing: border-box; }
 
 body {
-  background: #444;
+  background: #272525;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -63,7 +87,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.9); }
+      background: rgba(39, 37, 37, 0.9); }
 
 h1,
 h2,
@@ -79,7 +103,7 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(73, 73, 73, 0.5); }
+    background: rgba(44, 42, 42, 0.5); }
 
 a {
   color: #fff;

@@ -71,7 +71,7 @@
     top: 0;
     width: 100%;
     //creating the see through effect
-    opacity: 0.9;
+    //opacity: 0.9;
     // making the visibility of the li elements to be hidden
     visibility: hidden;
 
@@ -85,17 +85,68 @@
     //adding the branding to .show, hence we use &-
     &-branding,
     &-nav {
+
         display: flex;
         //making the display into a column
         flex-flow: column wrap;
         //alligning to the center
         align-items: center;
         justify-content: center;
+        //allowing the content to be on the left side of the left half
+        float: left;
         // giving 50% to each of the screen(width)
         width: 50%;
         height: 100vh;
-        //removing scrollbar
+        //hidding the scrollbar
         overflow: hidden;
+
+    }
+
+
+    //adding the style for the nav items
+    &-nav {
+        margin: 0;
+        padding: 0;
+        background: darken($color: #3a3939c5, $amount: 0);
+        list-style: none;
+        // taking the nav from top to buttom
+        transform: translate3d(0, -100%, 0);
+        //transitioning back in
+        @include easeOut;
+
+        //when the show class is applied to the nav we will style the following
+        &.show {
+            //slide in from the top
+            transform: translate3d(0, 0, 0);
+        }
+
+    }
+
+    //Adding style to the Branding side
+    &-branding {
+        background: (39, 37, 37);
+        transform: translate3d(0, 100%, 0);
+        @include easeOut;
+
+        &.show {
+            //Slide in from the bottom
+            transform: translate3d(0, -10, 0);
+
+        }
+
+        .portrait {
+            width: 250px;
+            height: 250px;
+            background: url('../images/workPic.jpg');
+            border-radius: 50%;
+            border: solid 3px red;
+        }
+    }
+
+    .nav_item {
+        transform: translate3d(600px, 0, 0);
+        @include easeOut;
+
 
     }
 
