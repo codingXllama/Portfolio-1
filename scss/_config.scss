@@ -44,6 +44,23 @@ $background-opacity:0.9;
 
 }
 
+//creating a function that will change the background color depending on the primary color
+//we will create a function NOT a mixin, because a function returns something and mixin does not
+@function set-text-color($color) {
+
+    //chekcing the color that is sent to this function
+    @if (lightness($color)>40) {
+        //if the lightness of that color is greater than 40 then we return black
+        @return #000;
+    }
+
+    @else {
+        //we return white
+        @return #fff;
+    }
+}
+
+
 
 //Adding media Query mixins/functions.
 //The purpose of these mixins/functions is to make the website more repsonsive regardless of the base resultion of the user's device

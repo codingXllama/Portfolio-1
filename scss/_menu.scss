@@ -16,7 +16,7 @@
         width: 28px;
         height: 3px;
         margin: 0 0 5px 0;
-        background: #fff;
+        background: set-text-color($primary-color);
         @include easeOut;
     }
 
@@ -36,7 +36,7 @@
                 //background: red;
                 transform: rotate(45deg) translate(5px, 5px);
                 //background: rgba(red, 0.9);
-                background: rgb(255, 246, 222);
+                background: set-text-color($primary-color);
             }
 
 
@@ -72,9 +72,10 @@
     top: 0;
     width: 100%;
     //creating the see through effect
-    opacity: 0.9;
+    //opacity: 0.2;
     // making the visibility of the li elements to be hidden
     visibility: hidden;
+    //background: set-text-color($primary-color);
 
 
     //when the menu 3Lines btn has the show class, then we will set the li elements (inside the .menu) to be visible
@@ -126,7 +127,7 @@
 
     //Adding style to the Branding side
     &-branding {
-        background: darken(rgba($primary-color, 0.9), 0.5);
+        background: darken(rgba($primary-color, 0.6), 0.5);
         transform: translate3d(0, 100%, 0);
         @include easeOut;
 
@@ -176,7 +177,7 @@
         text-transform: uppercase;
         padding: 1rem 0;
         font-weight: 300;
-        color: #fff;
+        color: set-text-color($primary-color);
         text-decoration: none;
         @include easeOut;
 
