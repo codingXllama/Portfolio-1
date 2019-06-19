@@ -218,7 +218,10 @@ main {
       background: url("../../images/wp1.png");
       width: 150px;
       height: 150px;
-      background-size: cover; } }
+      background-size: cover; }
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
