@@ -43,3 +43,48 @@ $background-opacity:0.9;
     }
 
 }
+
+
+//Adding media Query mixins/functions.
+//The purpose of these mixins/functions is to make the website more repsonsive regardless of the base resultion of the user's device
+
+
+@mixin mediaSm {
+
+    //adding the media query that only apply when the screen is 500px or less
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+
+
+//medium displays
+@mixin mediaMd {
+
+    //adding the media query that only apply when the screen is 768px or less
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+
+
+//large displays
+@mixin mediaLg {
+
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+
+
+
+
+@mixin mediaXL {
+
+    //adding the media query that only apply when the screen is 1171px or greater
+    @media screen and (max-width: 1171px) {
+        @content;
+    }
+}
