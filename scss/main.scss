@@ -34,7 +34,7 @@ h3 {
 
     //setting the lg-heading for only the heading that contains it, so we use the & sign
     &.lg-heading {
-        // rem unit is the multiplier of the html font size (default size= 16 px)
+        // 1rem unit is the multiplier of the html font size (default size= 16 px)
         //1 rem = 16 px,  
         font-size: 6rem;
     }
