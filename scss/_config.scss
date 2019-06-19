@@ -71,7 +71,7 @@ $background-opacity:0.9;
 
 
 //large displays
-@mixin mediaLg {
+@mixin mediaLG {
 
     @media screen and (min-width: 769px) and (max-width: 1170px) {
         @content;
