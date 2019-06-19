@@ -35,6 +35,7 @@
             &:nth-child(1) {
                 //background: red;
                 transform: rotate(45deg) translate(5px, 5px);
+                //background: rgba(red, 0.9);
                 background: rgb(255, 246, 222);
             }
 
@@ -53,9 +54,9 @@
                 //we do this by rotating in the opp direction of the 1st Line,
                 //and then we translate until the 2 lines form an X
                 transform: rotate(-45deg) translate(7px, -6px);
-                background: rgb(255, 255, 255);
-                width: 100%;
-                height: 0.25rem;
+                //background: rgb(255, 255, 255);
+                //width: 100%;
+                //height: 0.25rem;
             }
 
         }
@@ -71,7 +72,7 @@
     top: 0;
     width: 100%;
     //creating the see through effect
-    //opacity: 0.9;
+    opacity: 0.9;
     // making the visibility of the li elements to be hidden
     visibility: hidden;
 
@@ -107,7 +108,7 @@
     &-nav {
         margin: 0;
         padding: 0;
-        background: rgba(darken($primary-color, 5), 0.9);
+        background: darken($primary-color, 5);
 
         list-style: none;
         // taking the nav from top to buttom
@@ -125,7 +126,7 @@
 
     //Adding style to the Branding side
     &-branding {
-        background: rgba($primary-color, 0.9);
+        background: darken(rgba($primary-color, 0.9), 0.5);
         transform: translate3d(0, 100%, 0);
         @include easeOut;
 
@@ -138,25 +139,58 @@
 
 
         .portrait {
+            z-index: 1;
             width: 250px;
             height: 250px;
             background: url('../../images/wp1.png');
             background-size: cover;
             border-radius: 50%;
-            border: solid 3px red;
+            border: solid 3px $secondary-color;
         }
     }
 
-    .nav_item {
+    //adding the style for the nav bar item 
+    .nav-item {
         transform: translate3d(600px, 0, 0);
         @include easeOut;
 
+        //when the show class appears fromt the js
         &.show {
             //slide in from the right
             transform: translate3d(0, 0, 0);
+
+
         }
-
-
     }
 
+    //adding the 
+    .nav-link {
+        display: inline-block;
+        position: relative;
+        font-size: 30px;
+        text-transform: uppercase;
+        padding: 1rem 0;
+        font-weight: 300;
+        color: #fff;
+        text-decoration: none;
+        @include easeOut;
+    }
+}
+
+
+
+//Creating the delay for the nav item slide effect by 0.1s
+//we will use a for loop to achieve this
+
+
+//we use 4 because we have 4 nav items(home page, contact me, work, about)
+@for $item from 1 through 4 {
+
+    //taking in the nth child from the nav item
+    .nav-item:nth-child(#{$item}) {
+
+        //setting transition delay
+        //each item has different transition amount
+        transition-delay: $item * 0.1s;
+    }
 }
