@@ -188,10 +188,9 @@ main {
 .projects {
   display: grid;
   grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: repeat(5, 1fr); }
   .projects img {
-    width: 250px;
-    height: 250px;
+    width: 100%;
     border: 3px #fff solid; }
     .projects img:hover {
       opacity: 0.5;
@@ -200,7 +199,6 @@ main {
 
 .btn, .btn-dark, .btn-light {
   display: block;
-  width: 250px;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
@@ -229,7 +227,7 @@ main {
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -256,17 +254,15 @@ main {
     .menu-branding .portrait {
       background: url("../../images/wp1.png");
       width: 150px;
-      height: 150px;
-      background-size: cover; }
+      height: 150px; }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  main {
-    padding: 2rem; }
-  #home h1 {
+  main#home h1 {
     margin-top: 10vh; }
-  .lg-heading {
-    margin-top: 10vh;
-    font-size: 5rem; } }
+  .projects {
+    grid-template-columns: 1fr; } }
