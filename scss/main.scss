@@ -1,7 +1,7 @@
 // importing the needed config, which is found in the partial sass file (starts with _ ) 
 @import 'config';
 @import 'menu';
-@import 'mobile';
+
 
 
 // creating a border box for all(*) the content in the html.css
@@ -79,6 +79,7 @@ header {
 main {
     padding: 4rem;
     //height: 100%;
+    // this allows us to make a sticky footer such that it doesn't move up there is no jobs
     min-height: calc(100vh - 60px);
 
     // creating the style for the icons which are nested within the main tag in the index.html file
@@ -114,3 +115,71 @@ main {
         }
     }
 }
+
+
+
+//Creating the style for the grid, whihc is about me,jobs, projects, etc
+.about-info {
+    display: grid;
+    // creating the grid spacing
+    grid-gap: 30px;
+    grid-template-areas:
+        'bioimage bio bio'
+        'job1 job2 job3';
+    grid-template-columns: repeat(3, 1fr);
+
+
+
+
+    // creating the bio image gird area
+    .bio-image {
+        grid-area: bioimage;
+        margin: auto;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        border: $secondary-color 4px solid;
+    }
+
+    .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
+    }
+
+    .job-1 {
+        grid-area: job1;
+    }
+
+    .job-2 {
+        grid-area: job2;
+    }
+
+    .job-3 {
+        grid-area: job3;
+    }
+
+
+
+
+
+
+    // styling the jobs
+
+    .job {
+        background: lighten($primary-color, 5);
+        padding: 0.5rem;
+        border-bottom: $secondary-color 5px solid;
+    }
+}
+
+//creating the style for the footer
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: darken($primary-color, 10);
+    color: set-text-color($primary-color);
+    height: 60px;
+}
+
+//we import the mobile mixin after the css, becuase we want the style first before the media queries to kick in
+@import 'mobile';
