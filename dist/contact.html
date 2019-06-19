@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome to My Portfolio</title>
+    <title>CONTACT ME</title>
     <!-- Adding the font awesome CDN (content delivery network-->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <script src="https://use.fontawesome.com/a448b273cb.js"></script>
@@ -14,7 +14,7 @@
 
 </head>
 
-<body id="bg-img">
+<body>
     <!-- <div class="overlay"></div> -->
 
     <header>
@@ -35,7 +35,7 @@
             <!-- creating the second half of the menu -->
             <ul class="menu-nav">
                 <!-- creating the items for the menu -->
-                <li class="nav-item current">
+                <li class="nav-item ">
                     <a href="index.html" class="nav-link">HOME</a>
                 </li>
                 <li class="nav-item">
@@ -44,7 +44,7 @@
                 <li class="nav-item">
                     <a href="work.html" class="nav-link">MY WORK</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item current">
                     <a href="contact.html" class="nav-link">CONTACT ME</a>
                 </li>
             </ul>
@@ -53,40 +53,40 @@
     </header>
 
     <!-- specifiying the main content of the index.html using the main tag -->
-    <main id="home">
+    <main id="contact">
         <h1 class="lg-heading">
-            Osama
+            CONTACT
             <!-- using the span tag to group and apply style to the inline element which is the last name -->
-            <span class="text-secondary">Al-Chalabi </span>
+            <span class="text-secondary">ME </span>
         </h1>
         <h2 class="sm-heading">
-            Developer, Programmer, Student & Entrepreneur
+            This is how you can reach me ...
         </h2>
 
-        <!-- Note* the icons are nested inside the main tag  -->
-        <!-- Creating the div for the icons section -->
-        <div class="icons">
-            <!-- creating the twitter icon -->
-            <a href="#!">
-                <i class="fa fa-twitter fa-2x"></i>
-            </a>
-            <!-- Creating the facebook icon -->
-            <a href="#!">
-                <i class="fa fa-facebook fa-2x"></i>
-            </a>
-            <!-- creating the linkedin icon -->
-            <a href="#!">
-                <i class="fa fa-linkedin fa-2x"></i>
-            </a>
-            <!-- creating the github icon -->
-            <a href="https://github.com/codingXllama" target="_blank">
-                <i class="fa fa-github fa-2x"></i>
-            </a>
-            <a href="https://www.instagram.com/code_n_grow/?hl=en" target="_blank">
-                <i class="fa fa-instagram fa-2x"></i>
-            </a>
+        <!-- Creating the class where we add the info to -->
+        <div class="boxes">
+            <div>
+                <span class="text-secondary">Email:</span>osamaalchalabi1@gmail.com
+            </div>
         </div>
+        <div class="boxes">
+            <div>
+                <span class="text-secondary">Phone:</span>Email me to find out.
+            </div>
+        </div>
+        <div class="boxes">
+            <div>
+                <span class="text-secondary">Address:</span>Email me to find out.
+            </div>
+        </div>
+
     </main>
+
+    <!-- Adding a footer -->
+    <footer id="main-footer">
+        Copyright &copy; 2019
+
+    </footer>
     <script src="js/main.js"></script>
 </body>
 
