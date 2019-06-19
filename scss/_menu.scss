@@ -161,9 +161,14 @@
 
 
         }
+
+        //adding color to the <a> (link tag)for the nav-items
+        &.current>a {
+            color: $secondary-color;
+        }
     }
 
-    //adding the
+    //adding the style for each of the links for the nav items
     .nav-link {
         display: inline-block;
         position: relative;
@@ -174,6 +179,13 @@
         color: #fff;
         text-decoration: none;
         @include easeOut;
+
+
+        //adding a hover effect for each of the nav-link
+        &:hover {
+            color: $secondary-color;
+        }
+
     }
 }
 
