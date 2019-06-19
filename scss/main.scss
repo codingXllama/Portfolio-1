@@ -158,11 +158,6 @@ main {
         grid-area: job3;
     }
 
-
-
-
-
-
     // styling the jobs
 
     .job {
@@ -184,7 +179,8 @@ main {
 
     img {
         //shrinking the images
-        width: 100%;
+        width: 250px;
+        height: 250px;
         border: 3px #fff solid;
 
         //adding a hover effect for the images
@@ -199,8 +195,37 @@ main {
 
 
 //creating the button style
-.btn{
-    
+.btn {
+    display: block;
+    //size: 10px;
+    width: 250px;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+
+    //adding hover effect for the buttons
+    &:hover {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
+}
+
+
+// creating the dark button
+.btn-dark {
+    //extending the btn class
+    @extend .btn;
+    background: darken($primary-color, 50);
+    color: #fff;
+}
+
+
+//creating the light button
+
+.btn-light {
+    @extend .btn;
+    background: lighten($primary-color, 50);
+    color: #333;
 }
 
 
