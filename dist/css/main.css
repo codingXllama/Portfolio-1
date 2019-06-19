@@ -73,7 +73,7 @@
 
 body {
   background: rgba(112, 112, 112, 0.452);
-  color: set-text-color(rgba(112, 112, 112, 0.452));
+  color: white;
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
