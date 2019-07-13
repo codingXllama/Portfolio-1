@@ -171,9 +171,6 @@ main {
 
 //creatiing the work/projects style
 .projects {
-    .element::-webkit-scrollbar {
-        width: 0 !important
-    }
 
     //overflow-y: hidden;
     display: grid;
@@ -209,13 +206,16 @@ main {
     margin-top: 1rem;
 
     div {
+        align-items: center;
         font-size: 1.5rem;
-        border: 3px #fff solid;
+        border: 2px #fff dotted;
+        border-radius: 100px;
         padding: 1.5rem 2.5rem;
         margin-bottom: 3rem;
         @include easeOut;
 
         &:hover {
+            cursor: pointer;
             padding: 0.5rem 1.5rem;
             background: $secondary-color;
             color: set-text-color($secondary-color);
@@ -231,8 +231,6 @@ main {
 //creating the button style
 .btn {
     display: block;
-    //size: 10px;
-    //width: 250px;
     padding: 0.5rem 1rem;
     border: 0;
     margin-bottom: 0.3rem;
